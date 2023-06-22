@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Col, Container, Row } from "react-bootstrap";
+import "./App.css";
+import NoteForm from "./components/NoteForm";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NoteList from "./components/NoteList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container>
+        <Row>
+          <Col>
+            <NoteForm />
+          </Col>
+
+          <Col xs="12" md="6">
+            <NoteList />
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 
